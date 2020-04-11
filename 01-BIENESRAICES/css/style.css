@@ -15,7 +15,24 @@ body {
     /** Modificacion de fuente para body **/
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.6rem;
+    line-height: 2rem;
     /* font-family: 'Playfair Display', serif;*/
+}
+
+
+/** Utilidades **/
+
+.section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
 }
 
 
@@ -84,4 +101,21 @@ h4 {
 
 .navegacion a:hover {
     color: #71b100;
+}
+
+
+/** Nosotros **/
+
+.iconos-nosotros {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.icono {
+    flex-basis: calc(33.3% - 1rem);
+}
+
+.icono h3 {
+    text-transform: uppercase;
 }
