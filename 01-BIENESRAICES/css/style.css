@@ -86,6 +86,10 @@ p {
     display: block!important;
 }
 
+.contenido-centrado {
+    max-width: 60rem;
+}
+
 
 /** Botones **/
 
@@ -150,7 +154,7 @@ p {
 .navegacion a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-right: 2rem;
 }
 
@@ -185,12 +189,14 @@ p {
 .contenedor-anuncio {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .anuncio {
-    flex-basis: calc(33.3% - 1rem);
+    flex: 0 0 calc(33.3% - 1rem);
     border: 1px solid #b5b5b5;
     background-color: #f5f5f5;
+    margin-bottom: 2rem;
 }
 
 .contenido-anuncio {
@@ -211,7 +217,9 @@ p {
     list-style: none;
     padding: 0;
     display: flex;
+    flex: 1;
     justify-content: space-evenly;
+    max-width: 50rem;
 }
 
 .iconos-anuncio li {
@@ -363,6 +371,9 @@ p {
 
 /** PÁGINAS INTERNAS **/
 
+
+/** Nosotros **/
+
 .contenido-nosotros {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -374,4 +385,17 @@ p {
     font-size: 2.4rem;
     margin: 0;
     padding: 1rem 0 3rem 0;
+}
+
+
+/** Anuncio **/
+
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resumen-propiedad p {
+    padding: 2rem;
 }
