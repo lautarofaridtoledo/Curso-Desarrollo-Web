@@ -1,14 +1,16 @@
 /** Globales **/
 
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
-}
-
 html {
     /** Modificacion de tamaño de fuente **/
     font-size: 62.5%;
     /** Reset para REMS - 62,5% = 10px de 16px **/
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -19,12 +21,45 @@ body {
     /* font-family: 'Playfair Display', serif;*/
 }
 
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+/** Sistema de tamaños para etiquetas h **/
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
 
 /** Utilidades **/
 
-.section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.main,
+.seccion {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .fw-300 {
@@ -35,23 +70,42 @@ body {
     text-align: center;
 }
 
-
-/** Sistema de tamaños para etiquetas h **/
-
-h1 {
-    font-size: 3.4rem;
+.interlineado {
+    line-height: 2.5rem;
 }
 
-h2 {
-    font-size: 3rem;
+.margin-btm40 {
+    margin-bottom: 4rem;
 }
 
-h3 {
-    font-size: 2.8rem;
+.margin-t40 {
+    margin-top: 4rem;
 }
 
-h4 {
-    font-size: 2.4rem;
+.d-block {
+    display: block!important;
+}
+
+
+/** Botones **/
+
+.boton {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 1.5rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.boton-amarillo {
+    background-color: #E06709;
+}
+
+.boton-verde {
+    background-color: #71b100;
 }
 
 
@@ -118,4 +172,185 @@ h4 {
 
 .icono h3 {
     text-transform: uppercase;
+}
+
+
+/** Anuncio **/
+
+.contenedor-anuncio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.anuncio {
+    flex-basis: calc(33.3% - 1rem);
+    border: 1px solid #b5b5b5;
+    background-color: #f5f5f5;
+}
+
+.contenido-anuncio {
+    padding: 2rem;
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    margin: 2rem;
+}
+
+.precio {
+    color: #71b100;
+    font-weight: 700;
+}
+
+.iconos-anuncio {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconos-anuncio li {
+    /*flex: 1;*/
+    display: flex;
+}
+
+.iconos-anuncio li img {
+    margin-right: 0rem;
+}
+
+.ver-todas {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/** Contacto-Home **/
+
+.img-contacto {
+    background-image: url(/img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+
+.contenido-contacto {
+    flex: 1;
+    color: #ffffff;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
+}
+
+
+/** Sección inferior **/
+
+.seccion-inferior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion-inferior .blog {
+    flex-basis: 60%;
+}
+
+.seccion-inferior .testimoniales {
+    flex-basis: calc(40% - 2rem);
+}
+
+.entrada-blog {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-blog .imagen {
+    flex-basis: 40%;
+}
+
+.entrada-blog .texto-entrada {
+    flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.texto-entrada h4 {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.texto-entrada span {
+    color: #E06709;
+    margin: .5rem;
+}
+
+.texto-entrada h4::after {
+    content: '';
+    display: block;
+    width: 10rem;
+    height: .3rem;
+    background-color: #71B100;
+    margin-top: 1rem;
+}
+
+.fecha-publicacion {
+    font-size: 1.2rem;
+}
+
+.fs-0.5 {
+    font-size: 0.5rem;
+}
+
+
+/** Testimoniales **/
+
+.testimonial {
+    background-color: #71B100;
+    font-size: 2rem;
+    padding: 2rem;
+    color: #ffffff;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.testimonial p {
+    text-align: right;
+}
+
+.testimonial blockquote::before {
+    content: '';
+    background-image: url(../img/comilla.svg);
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    left: -2rem;
+}
+
+.testimonial blockquote {
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+
+/** Footer **/
+
+.site-footer {
+    background-color: #333333;
+    margin: 0;
+}
+
+.contenedor-footer {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    margin: 0;
+    color: #ffffff;
 }
